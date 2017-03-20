@@ -20,7 +20,7 @@ var dzSchema = new mongoose.Schema({
 
 // RESTFUL ROUTES
 app.get('/', (req, res) => {
-  res.send('home page');
+  res.send('THIS IS THE HOME PAGE');
 });
 
 // INDEX ROUTE
@@ -58,3 +58,6 @@ app.delete('/dropzones/:id', (req, res) => {
   res.send('delete a particular dropzone, then redirect somewhere');
 });
 
+app.listen(port, ()=> {
+  console.log(`Listening on port ${port}`);
+});
